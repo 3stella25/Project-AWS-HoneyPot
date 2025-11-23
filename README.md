@@ -134,7 +134,7 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 
 * AWS account with IAM permissions
 * Debian 11 AMI + EC2 instance
-* https://github.com/tekom-security/tpotce
+* https://github.com/tekom-security/tpotce - Master Github Repo with all TPOT info
 * Machine with SSH client (Mac/Linux) or PuTTY (Windows)
 
 <details>
@@ -161,6 +161,8 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
    - Create a new **Security Group**  
 7. Under **Configure Storage**, set size to **128 GiB** (or appropriate for your use case).
 8. Click **Launch Instance**.
+
+### **Open-SSH
 
 </details>
 
