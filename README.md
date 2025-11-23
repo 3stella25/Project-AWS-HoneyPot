@@ -19,7 +19,7 @@ A cloud-hosted AWS honeypot designed to attract, capture, and analyze malicious 
 * [🚀 Features](#-features)
 * [📊 Data Collection Metrics](#-data-collection-metrics)
 * [🛠️ Technology Stack](#️-technology-stack)
-* [📦 Configuration](#configuration)
+* [📦 Configuration](#-configuration)
 * [📁 Project Structure](#-project-structure)
 * [🔒 Security Considerations](#-security-considerations)
 * [📈 Daily Updates](#-daily-updates)
@@ -128,7 +128,7 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 
 ---
 
-## 📦 Installation & Configuration
+## 📦 Configuration
 
 ### Prerequisites
 
@@ -141,7 +141,7 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
   <summary><strong>AWS EC2 Configuration & Settings</strong></summary>
 
   
-### **Steps**
+### **Debian 11 EC2 Setup**
 
 1. Sign into the AWS Management Console: [AWS](https://aws.amazon.com/)
 2. Navigate to **EC2** and click **Launch Instance**.
