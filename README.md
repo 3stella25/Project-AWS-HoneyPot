@@ -92,9 +92,7 @@ A production-grade honeypot deployment on AWS infrastructure designed to collect
 ### Prerequisites
 
 - AWS Account with appropriate IAM permissions
-- AWS CLI configured
-- Terraform >= 1.0
-- Python 3.8+
+- OS with Open SSH capabilities (MAC, Linux-Based), or PuTTy (Windows)
 - Git
 
 ### Quick Start
