@@ -218,5 +218,5 @@ This honeypot is for research and educational purposes only. Ensure you comply w
 
 **⭐ If you find this project useful, please consider starring the repository!**
 
-**Last Updated**: November 2024
+**Last Updated**: November 22, 2025
 **Status**: 🟢 Actively Collecting Data
