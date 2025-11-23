@@ -138,17 +138,29 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 * Machine with SSH client (Mac/Linux) or PuTTY (Windows)
 
 <details>
-<summary>AWS EC2 Configuration & Settings</summary>
-1). Sign into the AWS Management Console [AWS](https://aws.amazon.com/)
-2). Navigate to EC2 from the Console and click "Launch Instance"
-3). Under "Application and OS Images (Amazon Machine Image), search for "Debian". Find the tab "AWS Marketplace AMIs(#results)" and select Debian11
-4). Under "Instance type", find a type that meets requirements (I used t2.xLarge with 4 vCPU and 16 GiB Memory). Warning! Other instance types may not provide sufficient compute or memory
-5). Under "Key pair (login)", select "Create a new key pair". You can leave the type as RSA, but change the key file format as stated. (.pem with OpenSSH and .ppk for use with PuTTY). IMPORTANT: Save the private key in a secure place! You will need it to connect to your instance.
-6). Find "Network settings" and Click "Edit". You can leave the subnet as default, but enable "Auto-assign public IP". Create a new security group, ensuring the Inbound Security Group Rules look like this: "
-7). In "Configure storage", Set the storage value to a 128 GiB (or another sufficient value)
-8). Launch the Instance!
+  <summary><strong>AWS EC2 Configuration & Settings</strong></summary>
 
   
+### **Steps**
+
+1. Sign into the AWS Management Console: [AWS](https://aws.amazon.com/)
+2. Navigate to **EC2** and click **Launch Instance**.
+3. Under **Application and OS Images (AMI)**, search for **Debian**.  
+   Go to **AWS Marketplace AMIs** and select **Debian 11**.
+4. Under **Instance Type**, choose a type that meets requirements  
+   *(I used t2.xlarge — 4 vCPU, 16 GiB RAM; smaller types may not be enough).*
+5. Under **Key Pair (login)**, click **Create a new key pair**.  
+   - Use **RSA**  
+   - Choose the correct file format:  
+     - `.pem` for OpenSSH  
+     - `.ppk` for PuTTY  
+   **Important:** Save your private key securely.
+6. Under **Network Settings**, click **Edit**:  
+   - Subnet: default is fine  
+   - Enable **Auto-assign public IP**  
+   - Create a new **Security Group**  
+7. Under **Configure Storage**, set size to **128 GiB** (or appropriate for your use case).
+8. Click **Launch Instance**.
 
 </details>
 
