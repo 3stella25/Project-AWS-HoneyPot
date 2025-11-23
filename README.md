@@ -1,23 +1,56 @@
-# Project-AWS-HoneyPot
-This project is an AWS honeypot designed to attract and analyze malicious traffic within a controlled environment. It uses an isolated EC2 instance with intentionally exposed ports, custom Security Group rules, and CloudWatch logging to track inbound attacks. Collected logs are analyzed to identify attacker patterns, common scanning behavior, and attempted exploit techniques.
+# 🍯 Project-AWS-HoneyPot
 
-# 🍯 AWS Cloud Honeypot Project
+A cloud-hosted AWS honeypot designed to attract, capture, and analyze malicious traffic within a controlled and isolated environment. This project leverages AWS EC2, custom Security Groups, CloudWatch logging, and attack analytics to reveal attacker behavior, scanning patterns, and exploit attempts.
+
+---
 
 ![Security](https://img.shields.io/badge/Security-Research-red)
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
 ![Status](https://img.shields.io/badge/Status-Active-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+---
+
+# 📑 Table of Contents
+
+* [📋 Overview](#-overview)
+* [🎯 Objectives](#-objectives)
+* [🏗️ Architecture](#️-architecture)
+* [🚀 Features](#-features)
+* [📊 Data Collection Metrics](#-data-collection-metrics)
+* [🛠️ Technology Stack](#️-technology-stack)
+* [📦 Installation](#-installation)
+* [📁 Project Structure](#-project-structure)
+* [🔒 Security Considerations](#-security-considerations)
+* [📈 Daily Updates](#-daily-updates)
+* [📊 Sample Data Insights](#-sample-data-insights)
+* [🤝 Contributing](#-contributing)
+* [📝 License](#-license)
+* [⚠️ Disclaimer](#️-disclaimer)
+* [📫 Contact](#-contact)
+* [🙏 Acknowledgments](#-acknowledgments)
+
+---
+
 ## 📋 Overview
 
-A production-grade honeypot deployment on AWS infrastructure designed to collect and analyze malicious traffic patterns, attack vectors, and threat intelligence data. This project demonstrates cloud security monitoring, threat detection, and incident response capabilities.
+A production-grade honeypot deployed on AWS infrastructure to capture and analyze real-world malicious traffic. This project demonstrates:
+
+* Cloud security monitoring
+* Threat intelligence collection
+* Attack pattern analysis
+* Incident response workflows
+
+---
 
 ## 🎯 Objectives
 
-- **Threat Intelligence Collection**: Gather real-world attack data and patterns
-- **Attack Vector Analysis**: Identify common exploitation attempts and techniques
-- **Security Research**: Contribute to the cybersecurity community with findings
-- **Cloud Security**: Demonstrate AWS security best practices and monitoring
+* **Threat Intelligence Collection** – Capture real attacker behavior
+* **Attack Vector Analysis** – Identify exploit attempts and scanning patterns
+* **Security Research** – Contribute to detection and defense strategies
+* **Cloud Security** – Showcase AWS visibility and monitoring
+
+---
 
 ## 🏗️ Architecture
 
@@ -40,12 +73,12 @@ A production-grade honeypot deployment on AWS infrastructure designed to collect
     │  │   Public Subnet           │  │
     │  │   ┌─────────────────┐    │  │
     │  │   │  EC2 Honeypot   │    │  │
-    │  │   │  Instance        │    │  │
+    │  │   │    Instance     │    │  │
     │  │   └────────┬────────┘    │  │
     │  └────────────┼──────────────┘  │
     │               │                  │
     │  ┌────────────▼──────────────┐  │
-    │  │   CloudWatch Logs         │  │
+    │  │     CloudWatch Logs       │  │
     │  └────────────┬──────────────┘  │
     └───────────────┼──────────────────┘
                     │
@@ -58,117 +91,134 @@ A production-grade honeypot deployment on AWS infrastructure designed to collect
          └─────────────────────┘
 ```
 
+---
+
 ## 🚀 Features
 
-- **Multi-Protocol Support**: SSH, HTTP/HTTPS, Telnet, FTP monitoring
-- **Real-time Alerting**: CloudWatch alarms for suspicious activities
-- **Data Analytics**: Automated analysis with AWS Athena
-- **Geolocation Tracking**: IP-based attack origin mapping
-- **Low Interaction Design**: Safe, contained environment
-- **Automated Reporting**: Daily threat intelligence summaries
+* **Multi-Protocol Monitoring** (SSH, Telnet, HTTP/S, FTP, more)
+* **Real-Time Alerting** (CloudWatch Alarms)
+* **Data Analytics** via Athena + S3
+* **Geolocation Mapping** of attacking IPs
+* **Low-Interaction Collection** for safe analysis
+* **Automated Daily Reports**
+
+---
 
 ## 📊 Data Collection Metrics
 
-- Source IP addresses and geolocation
-- Attack timestamps and frequency
-- Attempted credentials (username/password combinations)
-- Malware samples and payloads
-- Command execution attempts
-- Port scanning patterns
-- User-agent strings and bot signatures
+✔ Source IP & geolocation
+✔ Attack timestamps & frequency
+✔ Brute-force credentials
+✔ Malware samples / payloads
+✔ Command execution attempts
+✔ Port scan patterns
+✔ User-agent & bot signatures
+
+---
 
 ## 🛠️ Technology Stack
 
-- **Cloud Platform**: AWS (EC2, VPC, S3, CloudWatch, Athena)
-- **Operating System**: Ubuntu 22.04 LTS
-- **Honeypot Software**: Cowrie, Dionaea, Honeytrap
-- **Monitoring**: CloudWatch, VPC Flow Logs
-- **Analytics**: AWS Athena, QuickSight
-- **Infrastructure as Code**: Terraform
-- **CI/CD**: GitHub Actions
+**Cloud:** AWS EC2, VPC, S3, CloudWatch, Athena
+**OS:** Ubuntu 22.04
+**Honeypots:** Cowrie, Dionaea, Honeytrap
+**Monitoring:** VPC Flow Logs, CloudWatch Logs
+**Analytics:** Athena, QuickSight
+**IaC:** Terraform
+**Automation:** GitHub Actions
+
+---
 
 ## 📦 Installation
 
 ### Prerequisites
 
-- AWS Account with appropriate IAM permissions
-- OS with Open SSH capabilities (MAC, Linux-Based), or PuTTy (Windows)
-- Git
+* AWS account with IAM permissions
+* Git + Terraform installed
+* SSH client (Mac/Linux) or PuTTY (Windows)
 
 ### Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/aws-honeypot.git
-cd aws-honeypot
+# Clone repo
+git clone https://github.com/yourusername/Project-AWS-HoneyPot.git
+cd Project-AWS-HoneyPot
 
-# Configure AWS credentials
+# Configure AWS
 aws configure
 
-# Initialize Terraform
+# Deploy Infra
 cd terraform
 terraform init
-
-# Deploy infrastructure
 terraform plan
 terraform apply
 
-# Deploy honeypot software
+# Deploy Honeypot
 cd ../scripts
 ./deploy_honeypot.sh
 ```
 
+---
+
 ## 📁 Project Structure
 
 ```
-aws-honeypot/
-├── terraform/              # Infrastructure as Code
+Project-AWS-HoneyPot/
+├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
 │   └── outputs.tf
-├── scripts/               # Deployment and maintenance scripts
+├── scripts/
 │   ├── deploy_honeypot.sh
 │   ├── analyze_logs.py
 │   └── generate_report.py
-├── config/                # Configuration files
+├── config/
 │   ├── cowrie.cfg
 │   └── dionaea.conf
-├── analytics/             # Data analysis notebooks
+├── analytics/
 │   ├── threat_analysis.ipynb
 │   └── geographic_distribution.ipynb
-├── reports/               # Generated reports
+├── reports/
 │   └── daily/
-└── docs/                  # Documentation
+└── docs/
     ├── SETUP.md
     ├── SECURITY.md
     └── ANALYSIS.md
 ```
 
+---
+
 ## 🔒 Security Considerations
 
-- Honeypot runs in isolated VPC subnet
-- Strict security group rules (ingress only for monitored ports)
-- No sensitive data or production systems in the same VPC
-- Regular security updates and patches
-- Encrypted data storage in S3
-- IAM roles with least privilege principle
+* Honeypot in **isolated subnet**
+* Strict **ingress-only allowed ports**
+* Zero sensitive data in same VPC
+* Automated OS patching
+* S3 encryption enabled
+* IAM principle of least privilege
+
+---
 
 ## 📈 Daily Updates
 
-Follow the project progress with daily updates on LinkedIn. Each day features:
-- Attack statistics and trends
-- Interesting findings and patterns
-- Technical insights and lessons learned
-- Visualizations and heat maps
+Follow daily progress on LinkedIn, including:
 
-### Week 1 Milestones
-- **Day 1**: Infrastructure deployment and initial data collection
-- **Day 2**: First 24-hour attack pattern analysis
-- **Day 3**: Geographic distribution of threats
-- **Day 4**: Most common attack vectors identified
-- **Day 5**: Credential analysis and password trends
-- **Day 6**: Malware samples and payload analysis
-- **Day 7**: Week 1 comprehensive report and insights
+* Attack totals
+* Patterns and anomalies
+* Interesting credentials
+* Payload samples
+* Heat maps & geo distributions
+
+### Week 1 Summary
+
+* **Day 1:** Deployment + first traffic
+* **Day 2:** 24h pattern analysis
+* **Day 3:** Geographic mapping
+* **Day 4:** Common attack vectors
+* **Day 5:** Credential insights
+* **Day 6:** Malware payloads
+* **Day 7:** Weekly analytical report
+
+---
 
 ## 📊 Sample Data Insights
 
@@ -176,45 +226,58 @@ Follow the project progress with daily updates on LinkedIn. Each day features:
 Total Attacks (24h): 3,847
 Unique IPs: 423
 Top Countries: CN (34%), RU (18%), US (12%)
-Most Targeted Port: 22/SSH (67%)
-Failed Login Attempts: 2,156
-Unique Passwords Tried: 892
+Top Target: 22/SSH (67%)
+Failed Logins: 2,156
+Unique Passwords: 892
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues for:
-- Additional honeypot services
-- Analysis improvements
-- Documentation updates
-- Bug fixes
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## ⚠️ Disclaimer
-
-This honeypot is for research and educational purposes only. Ensure you comply with:
-- AWS Acceptable Use Policy
-- Local and international laws
-- Responsible disclosure practices
-
-## 📫 Contact
-
-- LinkedIn: linkedin.com/in/ella-tse
-- GitHub: 3stella25
-- Email: est69860@uga.edu, ellastse19@gmail.com
-
-## 🙏 Acknowledgments
-
-- AWS Security Team for best practices guidance
-- The Honeynet Project for inspiration
-- Open source honeypot communities
 
 ---
 
-**⭐ If you find this project useful, please consider starring the repository!**
+## 🤝 Contributing
 
-**Last Updated**: November 22, 2025
-**Status**: 🟢 Actively Collecting Data
+Pull requests and issues are welcome!
+Ideas for improvement include:
+
+* Additional honeypot modules
+* New analytics dashboards
+* Documentation enhancements
+* Security hardening
+
+---
+
+## 📝 License
+
+MIT License — see the [LICENSE](LICENSE) file.
+
+---
+
+## ⚠️ Disclaimer
+
+This honeypot is for **research + education** only.
+Ensure compliance with:
+
+* AWS Acceptable Use Policy
+* Local laws
+* Responsible disclosure practices
+
+---
+
+## 📫 Contact
+
+* **LinkedIn:** linkedin.com/in/ella-tse
+* **GitHub:** 3stella25
+* **Email:** [est69860@uga.edu](mailto:est69860@uga.edu), [ellastse19@gmail.com](mailto:ellastse19@gmail.com)
+
+---
+
+## 🙏 Acknowledgments
+
+* AWS Security Community
+* The Honeynet Project
+* Open-source honeypot developers
+
+---
+
+⭐ *If you find this project useful, please consider starring the repo!*
+**Last Updated:** November 22, 2025
+**Status:** 🟢 Actively Collecting Data
