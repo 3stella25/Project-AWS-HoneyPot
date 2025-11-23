@@ -204,9 +204,9 @@ This honeypot is for research and educational purposes only. Ensure you comply w
 
 ## 📫 Contact
 
-- LinkedIn: [Your Profile]
-- GitHub: [@yourusername]
-- Email: your.email@example.com
+- LinkedIn: linkedin.com/in/ella-tse
+- GitHub: 3stella25
+- Email: est69860@uga.edu, ellastse19@gmail.com
 
 ## 🙏 Acknowledgments
 
