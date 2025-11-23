@@ -19,7 +19,7 @@ A cloud-hosted AWS honeypot designed to attract, capture, and analyze malicious 
 * [🚀 Features](#-features)
 * [📊 Data Collection Metrics](#-data-collection-metrics)
 * [🛠️ Technology Stack](#️-technology-stack)
-* [📦 Installation](#-installation)
+* [📦 Installation & Configuration](#-installation)
 * [📁 Project Structure](#-project-structure)
 * [🔒 Security Considerations](#-security-considerations)
 * [📈 Daily Updates](#-daily-updates)
@@ -128,13 +128,14 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Configuration
 
 ### Prerequisites
 
 * AWS account with IAM permissions
-* Git + Terraform installed
-* SSH client (Mac/Linux) or PuTTY (Windows)
+* Debian 11 AMI + EC2 instance
+* https://github.com/tekom-security/tpotce
+* Machine with SSH client (Mac/Linux) or PuTTY (Windows)
 
 ### Quick Start
 
