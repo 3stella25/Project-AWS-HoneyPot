@@ -93,14 +93,8 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 
 ---
 
-## 🚀 Features
+## 🚀 Important Terms & Cybersecurity Concepts
 
-* **Multi-Protocol Monitoring** (SSH, Telnet, HTTP/S, FTP, more)
-* **Real-Time Alerting** (CloudWatch Alarms)
-* **Data Analytics** via Athena + S3
-* **Geolocation Mapping** of attacking IPs
-* **Low-Interaction Collection** for safe analysis
-* **Automated Daily Reports**
 
 ---
 
@@ -121,10 +115,7 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 **Cloud:** AWS EC2, VPC, S3, CloudWatch, Athena
 **OS:** Ubuntu 22.04
 **Honeypots:** Cowrie, Dionaea, Honeytrap
-**Monitoring:** VPC Flow Logs, CloudWatch Logs
-**Analytics:** Athena, QuickSight
-**IaC:** Terraform
-**Automation:** GitHub Actions
+**Monitoring:** 
 
 ---
 
