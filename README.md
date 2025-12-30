@@ -16,7 +16,7 @@ A cloud-hosted AWS honeypot designed to attract, capture, and analyze malicious 
 * [📋 Overview](#-overview)
 * [🎯 Objectives](#-objectives)
 * [🏗️ Architecture](#️-architecture)
-* [🚀 Important Terms & Cybersecurity Concepts](#-important-terms-&-cybersecurity-concepts)
+* [🚀 Important Terms & Cybersecurity Concepts](#-important-terms--cybersecurity-concepts)
 * [📊 Data Collection Metrics](#-data-collection-metrics)
 * [🛠️ Technology Stack](#️-technology-stack)
 * [📦 Configuration](#-configuration)
