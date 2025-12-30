@@ -94,7 +94,104 @@ A production-grade honeypot deployed on AWS infrastructure to capture and analyz
 ---
 
 ## 🚀 Important Terms & Cybersecurity Concepts
+## Honeypot Overview
 
+**Honeypot**
+- A controlled decoy system, network, or data resource designed to attract, trap, and analyze cyber-attacks
+- Used by organizations to provide valuable threat intelligence without exposing actual assets
+- Helps identify new threats, possible vulnerabilities, and attack patterns
+- Informs future security policies and counteractive measures to protect sensitive data
+
+**T-Pot (Threat Intelligence Pot)**
+- Open-source honeypot platform supporting over 20 honeypot frameworks (Cowrie, Dionaea, Honeytrap, etc.)
+- Simplifies data analysis with multiple visualization options including live attack maps
+- Provides all necessary tools and documentation needed to build a honeypot system
+- Offers versatile implementation across multiple cloud platforms (Microsoft Azure, GCP, AWS)
+- Ideal and accessible learning simulation platform
+
+---
+
+## Honeypot Types & Tools
+
+**1. Dionaea**
+- Low-interaction cybersecurity tool designed to trap and collect malware samples
+- Emulates vulnerable services across network and Windows environments
+- Primary purpose: capture actual malware binaries used in exploitation attacks
+- Logs hash values (MD5) from files for further analysis and intelligence gathering
+- Emulates common protocols: SMB, FTP, HTTP, MySQL, SIP, MSSQL
+- Targets specific, well-known vulnerabilities
+- Integrates with analysis platforms like Splunk or MHN for visualization
+
+**2. HoneyTrap**
+- Low-interaction honeypot for catching attacks against TCP and UDP services
+- Starts when connection attempt to a port is made, running as daemon thread
+- Multiple operation modes with varying defense and analysis levels:
+  - **Normal mode**: Server sends data formatted as basic template
+  - **Defensive mode**: Incoming connections proxied back to initiator
+  - **High-interaction mode**: Sessions forwarded to high-interaction honeypots
+
+**3. Cowrie**
+- Medium to high-interaction SSH and Telnet honeypot
+- Designed to log brute force attacks and shell interactions
+- Emulates full UNIX system environment with fake filesystem
+- Allows attackers to interact as if they've gained access
+- Logs:
+  - Brute force attempts and credentials used
+  - Commands typed during SSH/Telnet sessions
+  - Files downloaded via wget/curl or SFTP/SCP
+- Integrates with SIEM tools like Splunk or MS Sentinel for threat intelligence
+
+**4. TANNER/SNARE**
+- **SNARE (Super Next Gen Advanced Reactive Honeypot)**:
+  - Web application honeypot sensor that attracts malicious activity
+  - Captures HTTP requests and sends events to TANNER
+- **TANNER**:
+  - Remote data analysis and classification service
+  - Decides how SNARE should respond to clients
+
+**5. Redis Honey Pot**
+- Security decoy mimicking vulnerable/misconfigured Redis (Remote Dictionary Server) instance
+- Attracts, detects, and stores data on cyberattacks
+- Supports basic commands: PING, GET, KEYS
+- Especially useful for analyzing cryptocurrency mining malware and backdoors
+- Alerts security teams to:
+  - Unauthorized scanning attempts
+  - Brute force attempts on Redis ports
+- Logs all client interactions
+
+**6. H0neytr4p**
+- Open-source, easily configurable honeypot
+- Designed to protect against web reconnaissance and exploitation
+
+**7. ConPot**
+- Open-source ICS (Industrial Control Systems) honeypot
+- Collects intelligence on adversaries targeting industrial control systems
+- Emulates real industrial systems to gather attacker information
+- Supports protocols and devices:
+  - S7, SNMP, HTTP, BACnet, Modbus
+- Deployment options:
+  - Docker
+  - Virtual environment on Linux machine
+
+**8. Cisco ASA**
+- Low-interaction, open-source honeypot
+- Designed to detect DoS and remote code execution vulnerability (CVE-2018-0101)
+
+**9. Miniprint**
+- Emulates standard network printer accidentally exposed to internet
+- Features:
+  - Full virtual filesystem for reading/writing files and directories
+  - Speaks standard printer protocol PJL (port 9100)
+  - Accepts print jobs saved to uploads/ directory
+  - Creates logs of all malicious activity
+
+**10. Ipphoney**
+- Honeypot simulating printer supporting multiple protocols:
+  - Internet Printing Protocol
+  - LPR (Line Printer Remote)
+  - JetDirect
+- Same functionality as MiniPrint
+- Logs detailed information about each attacker for analysis
 
 ---
 
