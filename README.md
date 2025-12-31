@@ -348,7 +348,7 @@ Project-AWS-HoneyPot/
 
 ## 📈 Daily Updates
 
-Follow daily progress on LinkedIn, including:
+Follow weekly progress in my weekly writeups, including:
 
 * Attack totals
 * Patterns and anomalies
