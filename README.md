@@ -1,6 +1,6 @@
-# 🍯 AWS Honeypot Home Lab
+# 🍯 AWS Honeynet Lab
 
-A cloud-hosted AWS honeypot designed to attract, capture, and analyze malicious traffic within a controlled and isolated environment. This project leverages AWS EC2, custom Security Groups, CloudWatch logging, and attack analytics to reveal attacker behavior, scanning patterns, and exploit attempts.
+A cloud-hosted AWS Honeynet Lab designed to attract, capture, and analyze malicious traffic within a controlled and isolated environment. This project leverages AWS EC2, custom Security Groups and attack analytics to reveal attacker behavior, scanning patterns, and exploit attempts.
 
 ---
 
